@@ -1,0 +1,65 @@
+{
+  "name": "khmer-chess-ai",
+  "version": "1.0.0",
+  "description": "Khmer Chess (Ouk) artificial intelligent",
+  "main": "dist/KhmerChessAI.js",
+  "types": "src/KhmerChessAI.ts",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build:bundle": "webpack --config webpack.config.js",
+    "build:esnext": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "build": "rm -rf dist && npm run build:bundle && npm run build:esnext",
+    "test": "karma start karma.config.js",
+    "lint": "eslint . --ext .ts ./src",
+    "kc:ts:gen": "dts-gen -m khmer-chess -f ./node_modules/khmer-chess/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K4us/khmer-chess-ai.js.git"
+  },
+  "author": "Raksa Eng <eng.raksa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/K4us/khmer-chess-ai.js/issues"
+  },
+  "homepage": "https://github.com/K4us/khmer-chess-ai.js#readme",
+  "keywords": [
+    "Khmer",
+    "KhmerChess",
+    "Chess",
+    "Board"
+  ],
+  "dependencies": {
+    "k4us-share": "^1.0.5",
+    "khmer-chess": "^1.0.26",
+    "khmer-chess-board": "^1.0.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jasmine": "2.8.7",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "awesome-typescript-loader": "5.2.0",
+    "eslint": "^7.20.0",
+    "file-loader": "^6.2.0",
+    "jasmine-core": "3.1.0",
+    "karma": "2.0.4",
+    "karma-jasmine": "1.1.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-webpack": "3.0.0",
+    "source-map-loader": "0.2.3",
+    "svg-inline-loader": "^0.8.2",
+    "tslint-loader": "3.6.0",
+    "typescript": "3.5.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
