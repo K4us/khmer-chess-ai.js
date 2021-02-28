@@ -32,7 +32,34 @@ export default class KhmerChessAI {
   static title = config.name;
   static version = config.version;
   khmerChess: KhmerChess;
+  turn: string;
   constructor(khmerChess: KhmerChess) {
     this.khmerChess = khmerChess;
   }
+  takeTurn(turn: string) {
+    this.turn = turn;
+  }
+  pickRandomItem<T>(arr: T[]): T | null {
+    if (!arr.length) {
+      return null;
+    }
+    const rand = Math.floor(Math.random() * arr.length);
+    return arr[rand];
+  }
+  attemptMove(): { fromIndex: number, toIndex: number } | null {
+    if (this.khmerChess.turn === this.turn) {
+      const pieceIndices = this.khmerChess.getCanMoves();
+      const pickIndex = this.pickRandomItem(pieceIndices);
+      if (pickIndex) {
+        const pick = this.pickRandomItem(pickIndex.canMovePoints);
+        return {
+          fromIndex: pickIndex.point.index,
+          toIndex: pick.index,
+        };
+      }
+    }
+    return null;
+  }
 }
+
+console.log(`${KhmerChess.title}:${KhmerChess.version} + ${KhmerChessAI.title}:${KhmerChessAI.version}`);
