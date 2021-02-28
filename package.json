@@ -1,6 +1,6 @@
 {
   "name": "khmer-chess-ai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Khmer Chess (Ouk) artificial intelligent",
   "main": "dist/KhmerChessAI.js",
   "types": "src/KhmerChessAI.ts",
@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "khmer-chess": "^1.0.29",
-    "khmer-chess-board": "^1.0.17"
+    "khmer-chess-board": "^1.0.19"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
