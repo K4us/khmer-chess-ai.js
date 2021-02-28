@@ -1,6 +1,6 @@
 {
   "name": "khmer-chess-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Khmer Chess (Ouk) artificial intelligent",
   "main": "dist/KhmerChessAI.js",
   "types": "src/KhmerChessAI.ts",

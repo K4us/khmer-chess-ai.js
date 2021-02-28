@@ -6,7 +6,7 @@ module.exports = {
     context: ROOT,
 
     entry: {
-        'khmer-chess-ai': './KhmerChessAI.ts'
+        'khmer-chess-ai': './index.ts'
     },
 
     mode: 'production',

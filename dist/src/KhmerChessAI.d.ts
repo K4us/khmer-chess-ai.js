@@ -1,5 +1,9 @@
 import { KhmerChess } from 'khmer-chess';
 export default class KhmerChessAI {
+    static turnColors: {
+        black: string;
+        white: string;
+    };
     static title: string;
     static version: string;
     khmerChess: KhmerChess;

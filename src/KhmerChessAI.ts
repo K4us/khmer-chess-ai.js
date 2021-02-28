@@ -25,10 +25,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-import { KhmerChess } from 'khmer-chess';
+import { KhmerChess, PIECE_COLOR_BLACK, PIECE_COLOR_WHITE } from 'khmer-chess';
 import config from '../package.json';
 
 export default class KhmerChessAI {
+  static turnColors = {
+    black: PIECE_COLOR_BLACK,
+    white: PIECE_COLOR_WHITE,
+  }
   static title = config.name;
   static version = config.version;
   khmerChess: KhmerChess;

@@ -21,6 +21,15 @@
         });
         kcb.soundManager.enable();
         var khmerChessAI = new KhmerChessAI(kcb.khmerChess);
+        khmerChessAI.takeTurn(KhmerChessAI.turnColors.black);
+
+        kcb.boardManager.addOnChangeTurnEventListener(() => {
+            var result = khmerChessAI.attemptMove();
+            if (result) {
+                kcb.move(result.fromIndex, result.toIndex);
+            }
+        });
+        kcb.start();
     </script>
 </body>
 

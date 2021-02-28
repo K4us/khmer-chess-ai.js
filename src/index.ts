@@ -25,48 +25,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-
 import KhmerChessAI from './KhmerChessAI';
-import KhmerChessBoard from 'khmer-chess-board';
-import { PIECE_COLOR_BLACK } from 'khmer-chess';
 
-const container = document.getElementById('board-container');
-
-const kcb = new KhmerChessBoard();
-kcb.setOptions({
-    width: 600,
-    container: container,
-});
-kcb.soundManager.enable();
-
-const khmerChessAI = new KhmerChessAI(kcb.khmerChess);
-khmerChessAI.takeTurn(PIECE_COLOR_BLACK);
-
-kcb.boardManager.addOnChangeTurnEventListener(() => {
-    const result = khmerChessAI.attemptMove();
-    if (result) {
-        kcb.move(result.fromIndex, result.toIndex);
-    }
-});
-kcb.start();
-
-const toFullScreen = () => {
-    const fullscreen = document.createElement('button');
-    fullscreen.innerText = 'Full Screen';
-    document.body.appendChild(fullscreen);
-    fullscreen.onclick = () => {
-        document.documentElement.requestFullscreen().then(() => {
-            kcb.setFullScreen(true);
-        });
-    };
-
-    document.addEventListener('fullscreenchange', (event) => {
-        if (!document.fullscreenElement) {
-            kcb.setFullScreen(false);
-        }
-    });
-
-};
-toFullScreen();
-
-(window as any).kcb = kcb;
+(window as any).KhmerChessAI = KhmerChessAI;
