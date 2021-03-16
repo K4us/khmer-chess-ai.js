@@ -33,8 +33,8 @@
     "AI"
   ],
   "dependencies": {
-    "khmer-chess": "^1.0.29",
-    "khmer-chess-board": "^1.0.19"
+    "khmer-chess": "^1.0.30",
+    "khmer-chess-board": "^1.0.22"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
