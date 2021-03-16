@@ -48,6 +48,7 @@ kcb.boardManager.addOnChangeTurnEventListener(() => {
         kcb.move(result.fromIndex, result.toIndex);
     }
 });
+
 kcb.start();
 
 const toFullScreen = () => {
