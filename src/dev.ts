@@ -28,7 +28,7 @@
 
 import KhmerChessAI from './KhmerChessAI';
 import KhmerChessBoard from 'khmer-chess-board';
-import { PIECE_COLOR_BLACK } from 'khmer-chess';
+import { BoardEvent, PIECE_COLOR_BLACK } from 'khmer-chess';
 
 const container = document.getElementById('board-container');
 
@@ -46,6 +46,14 @@ kcb.boardManager.addOnChangeTurnEventListener(() => {
     const result = khmerChessAI.attemptMove();
     if (result) {
         kcb.move(result.fromIndex, result.toIndex);
+    }
+});
+
+kcb.khmerChess.addBoardEventListener((boardEvent: BoardEvent) => {
+    if (boardEvent.isWin) {
+        const cell = kcb.boardManager.get(boardEvent.actorPieceIndex.point.index);
+        const king = kcb.boardManager.getKing(cell.piece.color);
+        alert(`${king.piece.title} wins`);
     }
 });
 
