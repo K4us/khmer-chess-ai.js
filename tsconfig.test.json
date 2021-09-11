@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist-test/",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "ES5",
+    "lib": [
+      "es5",
+      "es6",
+    ],
+    "declaration": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules/khmer-chess/src/**/*.Spec.ts",
+    "node_modules/khmer-chess/src/**/*.test.ts"
+  ],
+  "include": [
+    "src/**/*",
+    "node_modules/khmer-chess/src/**/*",
+  ]
+}
