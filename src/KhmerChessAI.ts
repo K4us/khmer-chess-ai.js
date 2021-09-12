@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2021, K4us
- * Author: Raksa Eng <eng.raksa@gmail.com>
+ * Author: Raksa Eng <eng.raksa@gmail.com>, K4us Net k4us.net@gmail.com
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -38,6 +38,11 @@ export type MoveProp = {
   toIndex: number
 };
 
+export type Option = {
+  khmerChess?: KhmerChess;
+  turn: string;
+};
+
 export default class KhmerChessAI {
   static turnColors = {
     black: PIECE_COLOR_BLACK,
@@ -47,8 +52,8 @@ export default class KhmerChessAI {
   static version = config.version;
   khmerChess: KhmerChess;
   turn: string;
-  constructor(khmerChess: KhmerChess, turn: string) {
-    this.khmerChess = khmerChess;
+  constructor({ khmerChess, turn }: Option) {
+    this.khmerChess = khmerChess ? khmerChess : new KhmerChess();
     this.turn = turn;
   }
   get isAITurn() {

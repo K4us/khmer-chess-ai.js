@@ -1,4 +1,11 @@
-
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KhmerChessAI = void 0;
+var KhmerChessAI_1 = require("./KhmerChessAI");
+Object.defineProperty(exports, "KhmerChessAI", { enumerable: true, get: function () { return __importDefault(KhmerChessAI_1).default; } });
 /*
  * Copyright (c) 2021, K4us
  * Author: Raksa Eng <eng.raksa@gmail.com>, K4us Net k4us.net@gmail.com
@@ -25,27 +32,5 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- *---------------------------------------------------------------------------- */
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, 'dist');
-
-module.exports = {
-    context: ROOT,
-    entry: {
-        'khmer-chess-ai': './src/index.js'
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'khmer-chess-ai.umd.js',
-        libraryTarget: 'umd'
-    },
-    mode: 'production',
-    devtool: 'source-map',
-    resolve: {
-        alias: {
-            'khmer-chess': path.resolve(__dirname, 'dist', 'node_modules', 'khmer-chess', 'src'),
-        },
-        extensions: ['.js']
-    },
-};
+ *---------------------------------------------------------------------------- */ 
+//# sourceMappingURL=index.js.map

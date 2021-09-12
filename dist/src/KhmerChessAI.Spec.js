@@ -1,4 +1,8 @@
-
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Copyright (c) 2021, K4us
  * Author: Raksa Eng <eng.raksa@gmail.com>, K4us Net k4us.net@gmail.com
@@ -26,17 +30,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-import { KhmerChess, PIECE_COLOR_BLACK } from 'khmer-chess';
-import { KhmerChessAI } from './src/index';
-
-const kc = new KhmerChess('BHGQK2B/4GH2/TFFFFFFF/8/8/5ft1/2qg2b1/bhgk2h1 w ---- -- -.- ffffff');
-// console.log(kc.ren());
-
-const kcAI = new KhmerChessAI(kc, PIECE_COLOR_BLACK);
-
-console.log(kc.drawAscii());
-
-console.log(kcAI.attemptMove());
-
-
-// console.log(kc.board());
+var KhmerChessAI_1 = __importDefault(require("./KhmerChessAI"));
+describe('Should import successfully', function () {
+    it('should work', function () {
+        expect(KhmerChessAI_1.default.title).toBe('khmer-chess-ai');
+    });
+});
+//# sourceMappingURL=KhmerChessAI.Spec.js.map

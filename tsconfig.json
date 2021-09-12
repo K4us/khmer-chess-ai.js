@@ -13,7 +13,12 @@
     "declaration": true,
     "strictNullChecks": true
   },
+  "exclude": [
+    "node_modules/khmer-chess/src/**/*.Spec.ts",
+    "node_modules/khmer-chess/src/**/*.test.ts"
+  ],
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "node_modules/khmer-chess/src/**/*",
   ]
 }
