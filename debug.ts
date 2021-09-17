@@ -26,23 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-const path = require('path');
+import { KhmerChess, PIECE_COLOR_BLACK } from 'khmer-chess';
+import { KhmerChessAI } from './src/index';
 
-const ROOT = path.resolve(__dirname, 'dist');
+const kc = new KhmerChess('BHGQK2B/4GH2/TFFFFFFF/8/8/5ft1/2qg2b1/bhgk2h1 w ---- -- -.- ffffff');
+// console.log(kc.ren());
 
-module.exports = {
-    context: ROOT,
-    entry: {
-        'khmer-chess-ai': './src/index.js'
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'khmer-chess-ai.umd.js',
-        libraryTarget: 'umd'
-    },
-    mode: 'production',
-    devtool: 'source-map',
-    resolve: {
-        extensions: ['.js']
-    },
-};
+const kcAI = new KhmerChessAI({ khmerChess: kc, turn: PIECE_COLOR_BLACK });
+
+console.log(kc.drawAscii());
+
+console.log(kcAI.attemptMove());
+
+
+// console.log(kc.board());

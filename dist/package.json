@@ -1,13 +1,14 @@
 {
     "name": "khmer-chess-ai",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Khmer Chess (Ouk) Brain",
-    "main": "src/index.ts",
+    "main": "./dist/src/index.js",
+    "types": "./src/index.ts",
     "scripts": {
-        "start": "ts-node test-index.ts",
+        "start": "ts-node debug.ts",
         "lint": "eslint . --ext .ts ./src",
         "build:bundle": "webpack --config webpack.config.js",
-        "build:js": "del-cli dist -f && npm run lint && npx tsc && cp-cli ./node_modules/khmer-chess/package.json ./dist/node_modules/khmer-chess/package.json",
+        "build:js": "del-cli dist -f && npm run lint && tsc",
         "build": "npm run build:js && npm run build:bundle",
         "test": "karma start karma.conf.js",
         "cov": "http-server coverage/ -o"
@@ -33,7 +34,6 @@
         "@types/jasmine": "^3.8.2",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
         "@typescript-eslint/parser": "^4.15.1",
-        "cp-cli": "^2.0.0",
         "del-cli": "^4.0.1",
         "eslint": "^7.20.0",
         "http-server": "^13.0.1",
@@ -41,12 +41,12 @@
         "karma-chrome-launcher": "^3.1.0",
         "karma-jasmine": "^4.0.1",
         "karma-typescript": "^5.5.2",
-        "ts-loader": "^9.2.5",
+        "ts-node": "^10.2.1",
         "typescript": "^4.3.5",
         "webpack": "^5.21.2",
         "webpack-cli": "^4.5.0"
     },
     "dependencies": {
-        "khmer-chess": "^1.0.53"
+        "khmer-chess": "^1.0.55"
     }
 }
