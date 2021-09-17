@@ -7,20 +7,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "ts-code test-index.ts",
+            "name": "ts-node debug.ts",
             "program": "${workspaceRoot}/node_modules/.bin/ts-node",
             "args": [
                 "test-index.ts",
-            ],
-            "sourceMaps": false
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "ts-code test-ren-gen-moves.ts",
-            "program": "${workspaceRoot}/node_modules/.bin/ts-node",
-            "args": [
-                "test-ren-gen-moves.ts",
             ],
             "sourceMaps": false
         }

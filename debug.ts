@@ -26,17 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-import { KhmerChess, PIECE_COLOR_BLACK } from 'khmer-chess';
+import { KhmerChess, PIECE_COLOR_WHITE } from 'khmer-chess';
 import { KhmerChessAI } from './src/index';
 
 const kc = new KhmerChess('BHGQK2B/4GH2/TFFFFFFF/8/8/5ft1/2qg2b1/bhgk2h1 w ---- -- -.- ffffff');
 // console.log(kc.ren());
 
-const kcAI = new KhmerChessAI({ khmerChess: kc, turn: PIECE_COLOR_BLACK });
+const kcAI = new KhmerChessAI({ khmerChess: kc, turn: PIECE_COLOR_WHITE });
 
 console.log(kc.drawAscii());
 
-console.log(kcAI.attemptMove());
+const move = kcAI.attemptMove();
+
+console.log(move);
 
 
 // console.log(kc.board());
