@@ -47,6 +47,6 @@
         "webpack-cli": "^4.5.0"
     },
     "dependencies": {
-        "khmer-chess": "^1.0.60"
+        "khmer-chess": "^1.0.61"
     }
 }
