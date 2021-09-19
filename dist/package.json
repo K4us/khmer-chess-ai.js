@@ -1,6 +1,6 @@
 {
     "name": "khmer-chess-ai",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Khmer Chess (Ouk) Brain",
     "main": "./dist/src/index.js",
     "types": "./src/index.ts",
@@ -47,6 +47,6 @@
         "webpack-cli": "^4.5.0"
     },
     "dependencies": {
-        "khmer-chess": "^1.0.58"
+        "khmer-chess": "^1.0.60"
     }
 }
