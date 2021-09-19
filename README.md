@@ -5,8 +5,8 @@ khmer-chess-ai.js is a Javascript chess library that is used as player robot bra
 ## Importing
 
 * `npm i -D khmer-chess-ai`
-* [Typescript](https://www.typescriptlang.org/): `import { KhmerChessAI } from 'khmer-chess-ai'`
-* [Node.js](https://nodejs.org/en/): `const { KhmerChess } = require('khmer-chess-ai/dist/src')`
+* [Typescript](https://www.typescriptlang.org/): `import { KhmerChessAI } from 'khmer-chess-ai';`
+* [Node.js](https://nodejs.org/en/): `const { KhmerChessAI } = require('khmer-chess-ai');`
 
 ## Run
 

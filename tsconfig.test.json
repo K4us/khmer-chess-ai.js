@@ -14,11 +14,9 @@
     "strictNullChecks": true
   },
   "exclude": [
-    "node_modules/khmer-chess/src/**/*.Spec.ts",
-    "node_modules/khmer-chess/src/**/*.test.ts"
+    "node_modules/**/*"
   ],
   "include": [
     "src/**/*",
-    "node_modules/khmer-chess/src/**/*",
   ]
 }
