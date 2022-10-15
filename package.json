@@ -1,6 +1,6 @@
 {
   "name": "khmer-chess-ai",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Khmer Chess (Ouk) Brain",
   "main": "./dist/src/index.js",
   "types": "./src/index.ts",
@@ -11,7 +11,8 @@
     "build:js": "del-cli dist -f && npm run lint && tsc",
     "build": "npm run build:js && npm run build:bundle",
     "test": "karma start karma.conf.js",
-    "cov": "http-server coverage/ -o"
+    "cov": "http-server coverage/ -o",
+    "pub": "npm i && npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,6 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "khmer-chess": "^1.0.61"
+    "khmer-chess": "^1.0.65"
   }
 }

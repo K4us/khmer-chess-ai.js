@@ -2,9 +2,12 @@
 
 khmer-chess-ai.js is a Javascript chess library that is used as player robot brain.
 
-## Importing
+## Installing
 
 * `npm i -D khmer-chess-ai`
+
+## Importing
+
 * [Typescript](https://www.typescriptlang.org/): 
 ```typescript
 import { KhmerChessAI } from 'khmer-chess-ai';
